@@ -1,0 +1,10 @@
+name: logging
+description: |-
+  A lightweight and easy-to-use Python logging module inspired by a simplified Log4j-style API.
+  It provides a flexible, simple interface for logging with minimal configuration.
+version: 1.0.0
+changes: |-
+  [1.0.0]
+    * Initial release
+  [0.0.0]
+    * Under development
