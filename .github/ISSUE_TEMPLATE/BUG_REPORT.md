@@ -1,4 +1,4 @@
-# Bug Report for py-logging
+# Bug Report Template
 
 ## Description
 <!-- Describe the issue you're experiencing. -->

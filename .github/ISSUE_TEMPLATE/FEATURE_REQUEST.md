@@ -1,4 +1,4 @@
-# Feature Request for py-logging
+# Feature Request Template
 
 ## Description
 <!-- Describe the feature you would like to see. -->
