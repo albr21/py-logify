@@ -1,0 +1,10 @@
+[project]
+name = "logging"
+version = "1.0.0"
+description = "A lightweight and easy-to-use Python logging module inspired by a simplified Log4j-style API. It provides a flexible, simple interface for logging with minimal configuration."
+authors = [{ name = "albr21" }]
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
