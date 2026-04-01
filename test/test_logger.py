@@ -1,4 +1,4 @@
-from logger import Logger
+from logify.logger import Logger
 
 class TestLogger:
     def test_logger_creation(self):

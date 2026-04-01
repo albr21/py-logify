@@ -1,4 +1,4 @@
-# py-logging
+# py-logify
 
 A lightweight and easy-to-use Python logging module inspired by a simplified Log4j-style API. \
 It provides a flexible, simple interface for logging with minimal configuration.
@@ -8,16 +8,16 @@ It provides a flexible, simple interface for logging with minimal configuration.
 ### Basic Setup
 
 ```python
-import logging
+import logify
 
 # Create a logger instance
-logger = logging.Logger("MyLogger")
+logger = logify.Logger("MyLogger")
 
 # Add a standard output appender
-standard_output_appender = logging.appenders.StandardOutput("stdout")
+standard_output_appender = logify.appenders.StandardOutput("stdout")
 
 # Add a file appender
-file_appender = logging.appenders.File("file", "logfile.log")
+file_appender = logify.appenders.File("file", "logfile.log")
 
 # Add appenders to the logger
 logger.add_appender(standard_output_appender)

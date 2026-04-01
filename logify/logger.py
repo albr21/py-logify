@@ -1,10 +1,10 @@
-from appender import Appender
-from log_event import LogEvent
-from level import Level
+from logify.appender import Appender
+from logify.log_event import LogEvent
+from logify.level import Level
 
 class Logger():
     """
-    Logger class for logging messages with different levels and appenders.
+    Logger class for logify messages with different levels and appenders.
     """
 
     # @param name [str] The name of the logger

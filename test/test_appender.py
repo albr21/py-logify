@@ -1,9 +1,9 @@
 import sys
-from appenders.string_io import StringIO as StringIOAppender
-from layouts.basic import Basic
-from level import Level
-from filter import Filter
-from log_event import LogEvent
+from logify.appenders.string_io import StringIO as StringIOAppender
+from logify.layouts.basic import Basic
+from logify.level import Level
+from logify.filter import Filter
+from logify.log_event import LogEvent
 
 class TestAppender:
     def test_appender_add_filter(self):

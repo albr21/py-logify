@@ -1,6 +1,6 @@
 class LogEvent():
     """
-    LogEvent represents a single logging event, encapsulating all relevant
+    LogEvent represents a single logify event, encapsulating all relevant
     information about the it.
     """
 

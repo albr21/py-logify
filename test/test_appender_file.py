@@ -1,7 +1,7 @@
-from logger import Logger
-from level import Level
-from layouts.basic import Basic
-from appenders.file import File as FileAppender
+from logify.logger import Logger
+from logify.level import Level
+from logify.layouts.basic import Basic
+from logify.appenders.file import File as FileAppender
 
 
 class TestAppenderFile:

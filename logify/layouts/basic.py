@@ -1,5 +1,5 @@
-from layout import Layout
-from log_event import LogEvent
+from logify.layout import Layout
+from logify.log_event import LogEvent
 
 class Basic(Layout):
     """

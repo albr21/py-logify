@@ -1,10 +1,10 @@
 import sys
 from abc import ABC, abstractmethod
-from layouts.basic import Basic
-from layout import Layout
-from level import Level
-from log_event import LogEvent
-from filter import Filter
+from logify.layouts.basic import Basic
+from logify.layout import Layout
+from logify.level import Level
+from logify.log_event import LogEvent
+from logify.filter import Filter
 
 class Appender(ABC):
     """

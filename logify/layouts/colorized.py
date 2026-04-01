@@ -1,6 +1,6 @@
-from layout import Layout
-from log_event import LogEvent
-from level import Level
+from logify.layout import Layout
+from logify.log_event import LogEvent
+from logify.level import Level
 
 class Colorized(Layout):
     """

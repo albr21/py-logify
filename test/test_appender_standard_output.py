@@ -1,8 +1,8 @@
-from logger import Logger
-from level import Level
-from layouts.basic import Basic
-from layouts.colorized import Colorized
-from appenders.standard_output import StandardOutput as StandardOutputAppender
+from logify.logger import Logger
+from logify.level import Level
+from logify.layouts.basic import Basic
+from logify.layouts.colorized import Colorized
+from logify.appenders.standard_output import StandardOutput as StandardOutputAppender
 
 
 class TestAppenderStandardOutput:

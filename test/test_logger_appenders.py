@@ -1,6 +1,6 @@
-from logger import Logger
-from layouts.basic import Basic
-from appenders.string_io import StringIO as StringIOAppender
+from logify.logger import Logger
+from logify.layouts.basic import Basic
+from logify.appenders.string_io import StringIO as StringIOAppender
 
 
 class TestLoggerAppenders:

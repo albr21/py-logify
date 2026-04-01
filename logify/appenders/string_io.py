@@ -1,8 +1,8 @@
-from appender import Appender
-from filter import Filter
-from layout import Layout
-from layouts.basic import Basic
-from level import Level
+from logify.appender import Appender
+from logify.filter import Filter
+from logify.layout import Layout
+from logify.layouts.basic import Basic
+from logify.level import Level
 from io import BytesIO
 
 class StringIO(Appender):

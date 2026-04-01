@@ -1,4 +1,4 @@
-name: logging
+name: logify
 description: |-
   A lightweight and easy-to-use Python logging module inspired by a simplified Log4j-style API.
   It provides a flexible, simple interface for logging with minimal configuration.

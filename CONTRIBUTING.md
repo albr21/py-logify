@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering contributing to **py-logging**! Here’s how you can help:
+Thanks for considering contributing to **py-logify**! Here’s how you can help:
 
 ## How to Contribute
 1. **Fork** the repository
@@ -21,17 +21,18 @@ Thanks for considering contributing to **py-logging**! Here’s how you can help
 
 ## Development Environment
 - Use Python 3.8 or higher
+- Set up a virtual environment for development with `python -m venv venv`
 - Install dependencies with `pip install -r requirements-dev.txt`
 
 ## File Architecture
-- The main code is in the `logging` directory
+- The main code is in the `logify` directory
 - Tests are in the `test` directory
 
 ## Testing
 Make sure your changes pass the tests. You can run the tests with:
 
 ```bash
-pytest --cov="logging" --cov-report=term-missing
+pytest --cov="logify" --cov-report=term-missing
 ```
 
 ## License

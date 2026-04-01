@@ -1,9 +1,9 @@
 import sys
-from filter import Filter
-from appender import Appender
-from layout import Layout
-from layouts.basic import Basic
-from level import Level
+from logify.filter import Filter
+from logify.appender import Appender
+from logify.layout import Layout
+from logify.layouts.basic import Basic
+from logify.level import Level
 
 class File(Appender):
     """

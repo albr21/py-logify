@@ -1,6 +1,6 @@
-from filter import Filter
-from log_event import LogEvent
-from level import Level
+from logify.filter import Filter
+from logify.log_event import LogEvent
+from logify.level import Level
 
 class TestFilter:
     def test_filter_default(self):
