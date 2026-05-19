@@ -42,7 +42,6 @@ class Logger():
         )
         self.__append(log_event)
 
-
     # Enable to get an appender by name
     # @param appender [str] The name of the appender to retrieve
     # @return [Appender | None] The appender with the specified name
@@ -52,7 +51,7 @@ class Logger():
             if a.name == appender:
                 return a
         return None
-    
+
     # Add an appender to the logger
     # @param appender [Appender] The appender to add
     #                            Appender must not be None, must not already be added,
@@ -60,8 +59,10 @@ class Logger():
     # @raises ValueError if appender is None, already added, or has a name conflict
     # @return [None] No return value
     def add_appender(self, appender: Appender) -> None:
-        if appender in self.appenders: raise ValueError(f"Logger - Appender with name '{appender.name}' already exists in logger {self.name}")
-        if isinstance(appender, Appender) is False: raise ValueError("Logger - Appender must be an instance of Appender")
+        if appender in self.appenders:
+            raise ValueError(f"Logger - Appender with name '{appender.name}' already exists in logger {self.name}")
+        if isinstance(appender, Appender) is False:
+            raise ValueError("Logger - Appender must be an instance of Appender")
         self.appenders.append(appender)
 
     # Add multiple appenders to the logger

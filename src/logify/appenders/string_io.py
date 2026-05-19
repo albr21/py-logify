@@ -1,9 +1,9 @@
+from io import BytesIO
 from ..appender import Appender
 from ..filter import Filter
 from ..layout import Layout
 from ..layouts.basic import Basic
 from ..level import Level
-from io import BytesIO
 
 class StringIO(Appender):
     """
@@ -12,7 +12,8 @@ class StringIO(Appender):
 
     # @param name [str] The name of the appender
     # @param level [Level] The minimum log level for this appender (default: Level.DEBUG)
-    # @param layout [Layout] The layout to use for formatting log events (default: None, which means use the appender's layout)
+    # @param layout [Layout] The layout to use for formatting log events
+    #                        (default: None, which means use the appender's layout)
     # @param encoding [str] The encoding to use for output (default: None, which means use the system default encoding)
     # @param filters [list] The list of filters to apply (default: None, which means use the appender's filters)
     # @return [None] No return value
@@ -31,7 +32,7 @@ class StringIO(Appender):
     # @return [str] The current contents of the string buffer
     def get_value(self) -> str:
         return self.buffer.getvalue().decode(self.encoding)
-    
+
     # Clear the string buffer
     # @return [None] No return value
     def clear(self) -> None:

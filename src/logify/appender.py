@@ -9,12 +9,14 @@ from .filter import Filter
 class Appender(ABC):
     """
     Abstract base class for appenders.
-    Appenders are responsible for taking log events and outputting them to a specific destination (e.g., console, file, network).
+    Appenders are responsible for taking log events and outputting them to a specific
+    destination (e.g., console, file, network).
     """
 
     # @param name [str] The name of the appender
     # @param level [Level] The minimum log level for this appender (default: Level.DEBUG)
-    # @param layout [Layout] The layout to use for formatting log events (default: None, which means use the appender's layout)
+    # @param layout [Layout] The layout to use for formatting log events
+    #                        (default: None, which means use the appender's layout)
     # @param encoding [str] The encoding to use for output (default: None, which means use the system default encoding)
     # @param filters [list] The list of filters to apply (default: None, which means use the appender's filters)
     # @return [None] No return value
@@ -37,7 +39,7 @@ class Appender(ABC):
             if log_event is not None:
                 self.write(log_event)
         except Exception as e: # pragma: no cover
-            print(f"Appender - Failed to write log event in appender {self.name}: {e}", file=sys.stderr)     
+            print(f"Appender - Failed to write log event in appender {self.name}: {e}", file=sys.stderr)
 
     # Format the log event using the appender's layout and encoding
     # @param log_event [LogEvent] The log event to format
@@ -60,9 +62,12 @@ class Appender(ABC):
     # @raises ValueError if filter is None, already added, or has a name conflict
     # @return [None] No return value
     def add_filter(self, filter: Filter) -> None:
-        if filter is None: raise ValueError("Appender - Filter must not be None")
-        if filter in self.filters: raise ValueError("Appender - Filter already added")
-        if any(f.name == filter.name for f in self.filters): raise ValueError(f"Appender - Filter '{filter.name}' conflict with existing filter")
+        if filter is None:
+            raise ValueError("Appender - Filter must not be None")
+        if filter in self.filters:
+            raise ValueError("Appender - Filter already added")
+        if any(f.name == filter.name for f in self.filters):
+            raise ValueError(f"Appender - Filter '{filter.name}' conflict with existing filter")
         self.filters.append(filter)
 
     # Add multiple filters to the appender
@@ -99,16 +104,18 @@ class Appender(ABC):
                 self.encoding = encoding
             except LookupError:
                 self.encoding = sys.getdefaultencoding()
-                print(f"Appender - Invalid encoding '{encoding}' specified for appender {self.name}, using system default encoding instead #{self.encoding}", file=sys.stderr)     
+                print(f"Appender - Invalid encoding '{encoding}' specified for appender {self.name}, using system default encoding instead #{self.encoding}", file=sys.stderr)
 
     # Apply filters to determine if the log event should be allowed
     # @param log_event [LogEvent] The log event to evaluate
     # @return [LogEvent | None] The log event if allowed, or nil if denied
     def __allow(self, log_event) -> LogEvent | None:
-        if Level.is_enabled(self.level, log_event.level) is False: return None
+        if Level.is_enabled(self.level, log_event.level) is False:
+            return None
 
         if self.filters is not None:
             for filter in self.filters:
                 log_event = filter.allow(log_event)
-                if log_event is None: return None
+                if log_event is None:
+                    return None
         return log_event

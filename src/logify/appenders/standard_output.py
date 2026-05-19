@@ -10,4 +10,3 @@ class StandardOutput(Appender):
     # @return [None] No return value
     def write(self, log_event) -> None:
         print(self.formatted_message(log_event).decode(self.encoding))
-

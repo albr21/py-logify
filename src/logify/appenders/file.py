@@ -13,7 +13,8 @@ class File(Appender):
     # @param name [str] The name of the appender
     # @param file_path [str] The path to the file where log events will be written
     # @param level [Level] The minimum log level for this appender (default: Level.DEBUG)
-    # @param layout [Layout] The layout to use for formatting log events (default: None, which means use the appender's layout)
+    # @param layout [Layout] The layout to use for formatting log events
+    #                        (default: None, which means use the appender's layout)
     # @param encoding [str] The encoding to use for output (default: None, which means use the system default encoding)
     # @param filters [list] The list of filters to apply (default: None, which means use the appender's filters)
     # @return [None] No return value
@@ -27,8 +28,8 @@ class File(Appender):
     # @return [None] No return value
     def write(self, log_event) -> None:
         try:
-          with open(self.file_path, 'ab') as log_file:
-              log_file.write(self.formatted_message(log_event))
+            with open(self.file_path, 'ab') as log_file:
+                log_file.write(self.formatted_message(log_event))
         except Exception as e: # pragma: no cover
             print(f"File Appender - Failed to write log event to file {self.file_path}: {e}", file=sys.stderr)
 
