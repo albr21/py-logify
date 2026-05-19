@@ -25,8 +25,8 @@ Thanks for considering contributing to **py-logify**! Here’s how you can help:
 - Install dependencies with `pip install -r requirements-dev.txt`
 
 ## File Architecture
-- The main code is in the `logify` directory
-- Tests are in the `test` directory
+- The main code is in the `src/logify` directory
+- Tests are in the `tests` directory
 
 ## Testing
 Make sure your changes pass the tests. You can run the tests with:

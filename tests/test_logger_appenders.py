@@ -2,7 +2,6 @@ from logify.logger import Logger
 from logify.layouts.basic import Basic
 from logify.appenders.string_io import StringIO as StringIOAppender
 
-
 class TestLoggerAppenders:
     def setup_method(self):
         self.logger = Logger("TestLogger")

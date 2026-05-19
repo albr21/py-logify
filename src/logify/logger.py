@@ -98,5 +98,3 @@ class Logger():
     def __append(self, log_event: LogEvent) -> None:
         for appender in self.appenders:
             appender.append(log_event)
-
-    

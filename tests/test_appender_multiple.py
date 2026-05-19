@@ -4,7 +4,6 @@ from logify.layouts.basic import Basic
 from logify.appenders.file import File as FileAppender
 from logify.appenders.string_io import StringIO as StringIOAppender
 
-
 class TestAppenderMultiple:
     def setup_method(self):
         self.logger = Logger("TestLogger")

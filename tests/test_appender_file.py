@@ -3,7 +3,6 @@ from logify.level import Level
 from logify.layouts.basic import Basic
 from logify.appenders.file import File as FileAppender
 
-
 class TestAppenderFile:
     def setup_method(self):
         self.logger = Logger("TestLogger")
